@@ -1,7 +1,7 @@
 /* style.css */
 /* Base Styles */
 body {
-    font-family: 'Arial', sans-serif;
+  font-family: "Roboto", sans-serif;
     background-color: #f8f9fa;
   }
   
@@ -13,6 +13,9 @@ body {
   
   header a {
     transition: color 0.3s;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    font-family: "Bree Serif", serif;
   }
   
   header a:hover {
@@ -367,6 +370,9 @@ header {
   .about-content > * {
     position: relative;
     z-index: 1;
+    color: white;
+    font-family: "Bree Serif", serif;
+    font-size: 20px;
   }
   #projects
   {
@@ -395,7 +401,7 @@ header {
   }
   
   .contact-form label {
-    color: #333;
+    color: #f2e5e5;
     font-weight: bold;
     display: block;
     margin-bottom: 0.5rem;
@@ -502,6 +508,10 @@ header {
      
      
     }
+    .section-heading{
+      font-family: "Bree Serif", serif;
+
+    }
     
     .hero-3d {
       padding: 3rem 0;
@@ -519,6 +529,7 @@ header {
   #footer_1
   {
     background: linear-gradient(90deg, rgb(0 0 0), rgb(41 37 106));
+    color: white;
   }
   .bg-blue-500 {
     --tw-bg-opacity: 1;
@@ -526,7 +537,15 @@ header {
   }
   .text-gray-600 {
     --tw-text-opacity: 1;
-    color: rgb(255 255 255);
+    color: rgb(255, 255, 255);
+    --tw-text-opacity: 1;
+    color: rgb(14 19 48);
+    font-size: 10px;
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-family: "Bree Serif", serif;
+    font-size: 20px;
   }
   #f_col:hover{
     color: #4c0ff4;
@@ -540,6 +559,7 @@ header {
 #l_col:hover{
   color:blue;
 }
+
 /* add new fetures */
 .hero-3d{
   display: flex;
@@ -579,4 +599,8 @@ header {
 
 .animate-slide-up-down {
   animation: slide-up-down 2s ease-in-out infinite;
+}
+.colour_1{
+  margin-bottom: 2vh;
+  color: white;
 }
