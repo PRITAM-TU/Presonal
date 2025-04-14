@@ -1,0 +1,512 @@
+/* style.css */
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header a {
+    transition: color 0.3s;
+  }
+  
+  header a:hover {
+    color: #4a5568;
+  }
+  * Mobile Navigation Toggle */
+#nav-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none; /* Hidden by default on desktop */
+  transition: transform 0.3s ease;
+}
+
+#nav-toggle:hover {
+  color: #ffde7d;
+}
+
+/* Mobile Navigation Menu */
+#nav-mobile {
+  display: none;
+  flex-direction: column;
+  background: linear-gradient(135deg, #a099ab 0%, #1c1434 100%);
+  padding: 1rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+#nav-mobile.show {
+  transform: scaleY(1);
+}
+
+#nav-mobile a {
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+#nav-mobile a:hover {
+  color: #ffde7d;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 1023px) {
+  #nav-content {
+    display: none; /* Hide desktop nav on mobile */
+  }
+  
+  #nav-toggle {
+    display: block; /* Show hamburger menu on mobile */
+  }
+  
+  #nav-mobile {
+    display: flex; /* Show mobile nav when toggled */
+  }
+}
+  
+  /* 3D Button Effects */
+  .btn-3d {
+    position: relative;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease-in-out;
+  }
+  
+  .btn-3d:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-blue {
+    background-color: #3498db;
+    border-bottom: 4px solid #2980b9;
+  }
+  
+  .btn-blue:hover {
+    background-color: #2980b9;
+  }
+  
+  /* 3D Card Effects */
+  .card-3d {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+  .card-3d:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 3D Text Effects */
+  .text-3d {
+    text-shadow: 
+      1px 1px 0 #ccc,
+      2px 2px 0 #bbb,
+      3px 3px 0 #aaa,
+      4px 4px 0 #999;
+    color: #fff;
+  }
+  
+  /* Hero Section with 3D Background */
+  .hero-3d {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+  }
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid rgb(221, 221, 221);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: 0.3s;
+    background-color: #483d83;
+}
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .text-3d {
+      text-shadow: 
+        1px 1px 0 #ccc,
+        2px 2px 0 #bbb;
+    }
+  }
+  /* style.css */
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header Styles with Gradient Color */
+  header {
+    background: linear-gradient(135deg, #6e48aa 0%, #dad5dd 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+/* 3D Header Navigation Effects */
+header {
+    perspective: 1000px; /* Create 3D space for children */
+  }
+  
+  header nav {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  header a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(0);
+  }
+  
+  /* 3D Depth Effect on Links */
+  header a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 222, 125, 0.2);
+    border-radius: 4px;
+    transform: translateZ(-5px);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  /* 3D Hover Animation */
+  header a:hover {
+    color: #ffde7d;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px) translateZ(5px);
+  }
+  
+  header a:hover::before {
+    opacity: 1;
+    transform: translateZ(-2px);
+  }
+  
+  /* 3D Active/Pressed Effect */
+  header a:active {
+    transform: translateY(1px) translateZ(0);
+    transition-duration: 0.1s;
+  }
+  
+  /* 3D Mobile Toggle Button */
+  #nav-toggle {
+    color: white;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    perspective: 100px;
+  }
+  
+  #nav-toggle:hover {
+    transform: rotateY(15deg) scale(1.1);
+    color: #ffde7d;
+  }
+  
+  #nav-toggle:active {
+    transform: rotateY(0deg) scale(0.95);
+  }
+  
+  /* 3D Dropdown Animation */
+  #nav-mobile {
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  #nav-mobile.show {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  
+  /* 3D Current Page Indicator */
+  header a.active {
+    background: linear-gradient(to bottom, #ffde7d, #feb47b);
+    color: #0b0d28;
+    transform: translateZ(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  header a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+  }
+  /* Hero Section with Vibrant Gradient */
+  .hero-3d {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #000000 0%, #311a40 100%);
+   
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* About Section with Soft Color */
+  #about {
+    background: linear-gradient(135deg, #0e0e2d 0%, #c8c6eb 100%);
+    padding: 4rem 0;
+    position: relative;
+  }
+  
+  #about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(110, 72, 170, 0.1) 0%, rgba(157, 80, 187, 0.1) 100%);
+    z-index: -1;
+  }
+  
+  .about-content {
+    background-color: rgb(11, 13, 40);
+    border-radius: 15px;
+    color: wheat;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    box-shadow: 
+      0 10px 30px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(255, 215, 0, 0.1);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+  }
+  
+  .about-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 215, 0, 0.1) 0%,
+      rgba(255, 215, 0, 0) 50%,
+      rgba(156, 39, 176, 0.1) 100%
+    );
+    z-index: 0;
+  }
+  
+  .about-content:hover {
+    transform: perspective(1000px) rotateX(3deg) rotateY(3deg) translateZ(20px);
+    box-shadow: 
+      0 20px 50px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(255, 215, 0, 0.2);
+  }
+  
+  .about-content > * {
+    position: relative;
+    z-index: 1;
+  }
+  #projects
+  {
+    background-color: #11072a;
+    color: wheat;
+  }
+  .card_colour
+  {
+    background-color: rgb(109, 100, 154);
+  }
+  
+  /* Contact Section with Complementary Color */
+  #contact {
+    background: linear-gradient(135deg, #0e0e2d 0%, #c8c6eb 100%);
+    color: white;
+    padding: 4rem 0;
+  }
+  
+  .contact-form {
+    background: linear-gradient(135deg, #c74bcd 0%, #c7c6cd 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-form label {
+    color: #333;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #6e48aa;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(110, 72, 170, 0.2);
+  }
+  
+  /* 3D Button Effects (Updated Colors) */
+  .btn-3d {
+    position: relative;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.1s ease-in-out;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+  
+  .btn-3d:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+    border-bottom: 4px solid #e86a4a;
+  }
+  
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #feb47b 0%, #ff7e5f 100%);
+  }
+  
+  /* 3D Card Effects with Color */
+  .card-3d {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    background-color: rgb(91, 81, 100);
+    border-radius: 15px;
+    overflow: hidden;
+    border: none;
+  }
+  
+  .card-3d:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Section Headings */
+  .section-heading {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    color: #f4f9fd;
+  }
+  
+  .section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 172px;
+    height: 4px;
+    background: linear-gradient(90deg, #6e48aa, #9d50bb);
+    border-radius: 2px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .section-heading {
+      font-size: 2rem;
+    }
+    
+    .hero-3d {
+      padding: 3rem 0;
+    }
+    
+    .btn-3d {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.8rem;
+    }
+  }
+  #download
+  {background: linear-gradient(90deg, #f9f6ff, #1c131f);
+
+  }
+  #footer_1
+  {
+    background: linear-gradient(90deg, #f9f6ff, #5c3868);
+  }
