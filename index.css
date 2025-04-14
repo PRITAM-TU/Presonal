@@ -30,7 +30,7 @@ body {
 }
 
 #nav-toggle:hover {
-  color: #ffde7d;
+  color: #160e2e;
 }
 
 /* Mobile Navigation Menu */
@@ -63,7 +63,7 @@ body {
 }
 
 #nav-mobile a:hover {
-  color: #ffde7d;
+  color: #160e2e;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -178,7 +178,7 @@ body {
   
   /* Header Styles with Gradient Color */
   header {
-    background: linear-gradient(135deg, #6e48aa 0%, #dad5dd 100%);
+    background: linear-gradient(135deg, #001266 0%, #b57272 100%);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -223,8 +223,8 @@ header {
   
   /* 3D Hover Animation */
   header a:hover {
-    color: #ffde7d;
-    background-color: rgba(255, 255, 255, 0.1);
+    color: #160e2e;
+    background-color: rgba(161, 172, 182, 0.408);
     transform: translateY(-2px) translateZ(5px);
   }
   
@@ -249,7 +249,7 @@ header {
   
   #nav-toggle:hover {
     transform: rotateY(15deg) scale(1.1);
-    color: #ffde7d;
+    color: #160e2e;
   }
   
   #nav-toggle:active {
@@ -375,7 +375,7 @@ header {
   }
   .card_colour
   {
-    background-color: rgb(109, 100, 154);
+    background: linear-gradient(135deg, #0e0e2d 0%, #c8c6eb 100%);
   }
   
   /* Contact Section with Complementary Color */
@@ -386,7 +386,7 @@ header {
   }
   
   .contact-form {
-    background: linear-gradient(135deg, #c74bcd 0%, #c7c6cd 100%);
+    background: linear-gradient(135deg, rgb(51 59 159) 0%, rgb(213 121 121) 100%);
     border-radius: 15px;
     padding: 2rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -406,6 +406,7 @@ header {
     width: 100%;
     padding: 0.75rem;
     border: 2px solid #ddd;
+    background: linear-gradient(135deg, rgb(0 1 30) 0%, rgb(143 143 167) 100%);
     border-radius: 8px;
     margin-bottom: 1rem;
     transition: all 0.3s ease;
@@ -442,8 +443,8 @@ header {
   }
   
   .btn-primary {
-    background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
-    border-bottom: 4px solid #e86a4a;
+    background: linear-gradient(135deg, #5f6aff 0%, #010100 100%);
+    border-bottom: 4px solid #c1d2e7;
   }
   
   .btn-primary:hover {
@@ -455,7 +456,7 @@ header {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transform-style: preserve-3d;
     perspective: 1000px;
-    background-color: rgb(91, 81, 100);
+    background: linear-gradient(135deg, #6a6aaa 0%, #c8c6eb 100%);
     border-radius: 15px;
     overflow: hidden;
     border: none;
@@ -492,6 +493,15 @@ header {
     .section-heading {
       font-size: 2rem;
     }
+    #leftsection{
+      left:auto;
+    }
+    .hero-3d{
+      display: flex;
+      flex-direction: column;
+     
+     
+    }
     
     .hero-3d {
       padding: 3rem 0;
@@ -503,10 +513,70 @@ header {
     }
   }
   #download
-  {background: linear-gradient(90deg, #f9f6ff, #1c131f);
+  {background: linear-gradient(90deg, rgb(127 81 160), rgb(200 113 134));
 
   }
   #footer_1
   {
-    background: linear-gradient(90deg, #f9f6ff, #5c3868);
+    background: linear-gradient(90deg, rgb(0 0 0), rgb(41 37 106));
   }
+  .bg-blue-500 {
+    --tw-bg-opacity: 1;
+    background: linear-gradient(90deg, #110a21, #5c3868);
+  }
+  .text-gray-600 {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255);
+  }
+  #f_col:hover{
+    color: #4c0ff4;
+  }
+  #g_col:hover{
+    color: #000000;
+  }
+  #t_col:hover{
+    color: #39373e;
+  }
+#l_col:hover{
+  color:blue;
+}
+/* add new fetures */
+.hero-3d{
+  display: flex;
+ 
+ 
+}
+
+.rightsection
+{
+  margin-right: 15vh;
+}
+/* @keyframes fadein {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fadein {
+  animation: fadein 0.7s ease-out forwards;
+} */
+
+@keyframes slide-up-down {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px);
+    opacity: 0.8;
+  }
+}
+
+.animate-slide-up-down {
+  animation: slide-up-down 2s ease-in-out infinite;
+}
