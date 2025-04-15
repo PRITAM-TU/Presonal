@@ -18,7 +18,8 @@
 </head>
 <body class="bg-gray-100 text-gray-800">
   <!-- Header (same as before) -->
-  <header>
+  <section >
+  <header class="sticky-section" >
     <div class="container mx-auto px-6 py-3 flex justify-between items-center" >
       <h2 class="logo">P<span>ritam_2.O</span></h2>
       <div class="block lg:hidden">
@@ -31,6 +32,7 @@
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
         <a href="#download">Download CV</a>
+        <img src="moon.png" alt="loding"id="icon" class="dark-theme">
       </nav>
     </div>
     <nav id="nav-mobile">
@@ -38,8 +40,10 @@
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
       <a href="#download">Download CV</a>
+      <img src="moon.png" alt="loding"id="icon">
     </nav>
   </header>
+  </section>
   <!-- Hero Section with 3D effects -->
   <section class="hero-3d">
     
@@ -252,6 +256,20 @@ AOS.init({
   offset:200,
     duration: 2000,
 });
+</script>
+<script>
+  var icon=document.getElementById("icon");
+  icon.onclick=function(){
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme"))
+  {
+    icon.src="sun.png";
+  }
+  else{
+    icon.src="moon.png";
+  }
+
+  }
 </script>
 </body>
 </html>

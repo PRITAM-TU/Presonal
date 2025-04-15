@@ -11,6 +11,21 @@ body {
      scroll-snap-type: y; 
      overflow-x: hidden;
   }
+  :root{
+
+    --primary-color:linear-gradient(135deg, #626262 0%, #2e0845 100%);
+   --secondary-color:linear-gradient(135deg, #17153a 0%, #220a16 100%);
+   --ter--color:linear-gradient(135deg, #6d8089 0%, #e0e0e0 100%);
+  
+   
+  }
+  .dark-theme{
+    --primary-color:linear-gradient(135deg, #000000 0%, #311a40 100%);
+    --secondary-color:linear-gradient(135deg, #0e0e2d 0%, #c8c6eb 100%);
+    --ter--color:linear-gradient(135deg, #936f92 0%, #e0e0e0 100%);
+   
+  
+  }
   .logo {
     font-size: 40px;
     font-family: "Rubik Wet Paint", serif;
@@ -42,6 +57,7 @@ body {
   header {
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position:sticky;
   }
   
   header a {
@@ -64,6 +80,13 @@ body {
   display: none; /* Hidden by default on desktop */
   transition: transform 0.3s ease;
 }
+#icon{
+  width: 36px;
+    cursor: pointer;
+    margin-right: -45px;
+    height: 44px;
+
+}
 
 #nav-toggle:hover {
   color: #160e2e;
@@ -73,7 +96,7 @@ body {
 #nav-mobile {
   display: none;
   flex-direction: column;
-  background: linear-gradient(135deg, #a099ab 0%, #1c1434 100%);
+  background:  --primary-color;
   padding: 1rem;
   position: absolute;
   top: 100%;
@@ -91,7 +114,7 @@ body {
 }
 
 #nav-mobile a {
-  color: white;
+  color:--secondary-color;
   text-decoration: none;
   padding: 0.75rem 1rem;
   border-radius: 4px;
@@ -173,7 +196,7 @@ body {
   .hero-3d {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+    background: --secondary-color;
   }
   .contact-form input, .contact-form textarea {
     width: 100%;
@@ -214,17 +237,14 @@ body {
   
   /* Header Styles with Gradient Color */
   header {
-    background: linear-gradient(135deg, #001266 0%, #b57272 100%);
+    background: var(--secondary-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
     top: 0;
+    position:sticky;
     z-index: 1000;
   }
   
 /* 3D Header Navigation Effects */
-header {
-    perspective: 1000px; /* Create 3D space for children */
-  }
   
   header nav {
     display: flex;
@@ -237,7 +257,7 @@ header {
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     padding: 0.5rem 1rem;
     border-radius: 4px;
-    position: relative;
+    /* position: relative; */
     transform-style: preserve-3d;
     transform: translateZ(0);
   }
@@ -273,6 +293,13 @@ header {
   header a:active {
     transform: translateY(1px) translateZ(0);
     transition-duration: 0.1s;
+  }
+  .sticky-section {
+    position: sticky;
+    top: 0;
+    z-index: 999; /* adjust as needed */
+    background: var(--secondary-color); /* or your desired background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   /* 3D Mobile Toggle Button */
@@ -328,7 +355,7 @@ header {
   .hero-3d {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #000000 0%, #311a40 100%);
+    background:var(--primary-color);
    
     color: white;
     padding: 5rem 0;
@@ -344,7 +371,7 @@ header {
   
   /* About Section with Soft Color */
   #about {
-    background: linear-gradient(135deg, #0e0e2d 0%, #c8c6eb 100%);
+    background:var(--secondary-color);
     padding: 4rem 0;
     position: relative;
   }
@@ -637,3 +664,6 @@ header {
   margin-bottom: 2vh;
   color: white;
 }
+/* Header Styles with Gradient Color */
+
+/* 3D Header Navigation Effects */
