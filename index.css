@@ -11,6 +11,32 @@ body {
      scroll-snap-type: y; 
      overflow-x: hidden;
   }
+  .logo {
+    font-size: 40px;
+    font-family: "Rubik Wet Paint", serif;
+    color: #cd8af2;
+}
+.logo_1 {
+  font-size: 30px;
+  font-family: "Bree Serif", serif;
+  color: #cd8af2;
+}
+  .logo span {
+        color: #f9fcff;
+   
+    font-size: 32px;
+}
+.logo_1 {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(30) infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width:38%; }
+}
   
   /* Header Styles */
   header {
