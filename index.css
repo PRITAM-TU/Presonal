@@ -662,3 +662,7 @@ body {
 /* Header Styles with Gradient Color */
 
 /* 3D Header Navigation Effects */
+.social-links :hover {
+
+  transform: translateY(-5px) translateZ(10px);
+}
